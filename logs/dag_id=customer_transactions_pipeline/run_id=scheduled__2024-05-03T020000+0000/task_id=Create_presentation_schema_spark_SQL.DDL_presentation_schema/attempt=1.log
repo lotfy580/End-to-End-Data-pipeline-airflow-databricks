@@ -1,0 +1,94 @@
+[2024-05-13T04:49:01.585+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-13T04:49:01.603+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_transactions_pipeline.Create_presentation_schema_spark_SQL.DDL_presentation_schema scheduled__2024-05-03T02:00:00+00:00 [queued]>
+[2024-05-13T04:49:01.612+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_transactions_pipeline.Create_presentation_schema_spark_SQL.DDL_presentation_schema scheduled__2024-05-03T02:00:00+00:00 [queued]>
+[2024-05-13T04:49:01.703+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2024-05-13T04:49:01.741+0000] {taskinstance.py:2327} INFO - Executing <Task(DatabricksRunNowOperator): Create_presentation_schema_spark_SQL.DDL_presentation_schema> on 2024-05-03 02:00:00+00:00
+[2024-05-13T04:49:01.747+0000] {standard_task_runner.py:63} INFO - Started process 12569 to run task
+[2024-05-13T04:49:01.751+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'customer_transactions_pipeline', 'Create_presentation_schema_spark_SQL.DDL_presentation_schema', 'scheduled__2024-05-03T02:00:00+00:00', '--job-id', '76', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp_fdj7hub']
+[2024-05-13T04:49:01.755+0000] {standard_task_runner.py:91} INFO - Job 76: Subtask Create_presentation_schema_spark_SQL.DDL_presentation_schema
+[2024-05-13T04:49:01.809+0000] {task_command.py:426} INFO - Running <TaskInstance: customer_transactions_pipeline.Create_presentation_schema_spark_SQL.DDL_presentation_schema scheduled__2024-05-03T02:00:00+00:00 [running]> on host f5da772b0226
+[2024-05-13T04:49:01.893+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='mm22@gmail.com' AIRFLOW_CTX_DAG_OWNER='ct' AIRFLOW_CTX_DAG_ID='customer_transactions_pipeline' AIRFLOW_CTX_TASK_ID='Create_presentation_schema_spark_SQL.DDL_presentation_schema' AIRFLOW_CTX_EXECUTION_DATE='2024-05-03T02:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-03T02:00:00+00:00'
+[2024-05-13T04:49:01.894+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-13T04:49:01.916+0000] {base.py:84} INFO - Using connection ID 'databricks_default' for task execution.
+[2024-05-13T04:49:01.918+0000] {databricks_base.py:501} INFO - Using token auth.
+[2024-05-13T04:49:02.577+0000] {databricks.py:56} INFO - Run submitted with run_id: 681101070046850
+[2024-05-13T04:49:02.578+0000] {databricks_base.py:501} INFO - Using token auth.
+[2024-05-13T04:49:03.416+0000] {databricks_base.py:501} INFO - Using token auth.
+[2024-05-13T04:49:03.726+0000] {databricks.py:109} INFO - Create_presentation_schema_spark_SQL.DDL_presentation_schema in run state: {'life_cycle_state': 'RUNNING', 'result_state': '', 'state_message': ''}
+[2024-05-13T04:49:03.727+0000] {databricks.py:110} INFO - View run status, Spark UI, and logs at https://adb-321042217431130.10.azuredatabricks.net/?o=321042217431130#job/294469495791621/run/681101070046850
+[2024-05-13T04:49:03.727+0000] {databricks.py:111} INFO - Sleeping for 30 seconds.
+[2024-05-13T04:49:33.749+0000] {databricks_base.py:501} INFO - Using token auth.
+[2024-05-13T04:49:34.063+0000] {databricks_base.py:501} INFO - Using token auth.
+[2024-05-13T04:49:34.561+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-13T04:49:34.570+0000] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/databricks/operators/databricks.py", line 858, in execute
+    _handle_databricks_operator_execution(self, hook, self.log, context)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/databricks/operators/databricks.py", line 107, in _handle_databricks_operator_execution
+    raise AirflowException(error_message)
+airflow.exceptions.AirflowException: Create_presentation_schema_spark_SQL.DDL_presentation_schema failed with terminal state: {'life_cycle_state': 'INTERNAL_ERROR', 'result_state': 'FAILED', 'state_message': 'Task DDL_presentation failed with message: Workload failed, see run output for details. This caused all downstream tasks to get skipped.'} and with the error [PARSE_SYNTAX_ERROR] Syntax error at or near end of input. SQLSTATE: 42601
+[2024-05-13T04:49:34.573+0000] {taskinstance.py:1205} INFO - Marking task as UP_FOR_RETRY. dag_id=customer_transactions_pipeline, task_id=Create_presentation_schema_spark_SQL.DDL_presentation_schema, execution_date=20240503T020000, start_date=20240513T044901, end_date=20240513T044934
+[2024-05-13T04:49:34.585+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 76 for task Create_presentation_schema_spark_SQL.DDL_presentation_schema (Create_presentation_schema_spark_SQL.DDL_presentation_schema failed with terminal state: {'life_cycle_state': 'INTERNAL_ERROR', 'result_state': 'FAILED', 'state_message': 'Task DDL_presentation failed with message: Workload failed, see run output for details. This caused all downstream tasks to get skipped.'} and with the error [PARSE_SYNTAX_ERROR] Syntax error at or near end of input. SQLSTATE: 42601; 12569)
+[2024-05-13T04:49:34.635+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-05-13T04:49:34.672+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-13T04:49:34.676+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-05-13T04:57:27.601+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-13T04:57:27.623+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_transactions_pipeline.Create_presentation_schema_spark_SQL.DDL_presentation_schema scheduled__2024-05-03T02:00:00+00:00 [queued]>
+[2024-05-13T04:57:27.631+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_transactions_pipeline.Create_presentation_schema_spark_SQL.DDL_presentation_schema scheduled__2024-05-03T02:00:00+00:00 [queued]>
+[2024-05-13T04:57:27.632+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2024-05-13T04:57:27.647+0000] {taskinstance.py:2327} INFO - Executing <Task(DatabricksRunNowOperator): Create_presentation_schema_spark_SQL.DDL_presentation_schema> on 2024-05-03 02:00:00+00:00
+[2024-05-13T04:57:27.652+0000] {standard_task_runner.py:63} INFO - Started process 12794 to run task
+[2024-05-13T04:57:27.657+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'customer_transactions_pipeline', 'Create_presentation_schema_spark_SQL.DDL_presentation_schema', 'scheduled__2024-05-03T02:00:00+00:00', '--job-id', '95', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpjp9lzz6_']
+[2024-05-13T04:57:27.659+0000] {standard_task_runner.py:91} INFO - Job 95: Subtask Create_presentation_schema_spark_SQL.DDL_presentation_schema
+[2024-05-13T04:57:27.712+0000] {task_command.py:426} INFO - Running <TaskInstance: customer_transactions_pipeline.Create_presentation_schema_spark_SQL.DDL_presentation_schema scheduled__2024-05-03T02:00:00+00:00 [running]> on host f5da772b0226
+[2024-05-13T04:57:27.797+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='mm22@gmail.com' AIRFLOW_CTX_DAG_OWNER='ct' AIRFLOW_CTX_DAG_ID='customer_transactions_pipeline' AIRFLOW_CTX_TASK_ID='Create_presentation_schema_spark_SQL.DDL_presentation_schema' AIRFLOW_CTX_EXECUTION_DATE='2024-05-03T02:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-03T02:00:00+00:00'
+[2024-05-13T04:57:27.798+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-13T04:57:27.821+0000] {base.py:84} INFO - Using connection ID 'databricks_default' for task execution.
+[2024-05-13T04:57:27.823+0000] {databricks_base.py:501} INFO - Using token auth.
+[2024-05-13T04:57:28.285+0000] {databricks.py:56} INFO - Run submitted with run_id: 572730919196171
+[2024-05-13T04:57:28.285+0000] {databricks_base.py:501} INFO - Using token auth.
+[2024-05-13T04:57:28.626+0000] {databricks_base.py:501} INFO - Using token auth.
+[2024-05-13T04:57:29.191+0000] {databricks.py:109} INFO - Create_presentation_schema_spark_SQL.DDL_presentation_schema in run state: {'life_cycle_state': 'RUNNING', 'result_state': '', 'state_message': ''}
+[2024-05-13T04:57:29.192+0000] {databricks.py:110} INFO - View run status, Spark UI, and logs at https://adb-321042217431130.10.azuredatabricks.net/?o=321042217431130#job/294469495791621/run/572730919196171
+[2024-05-13T04:57:29.192+0000] {databricks.py:111} INFO - Sleeping for 30 seconds.
+[2024-05-13T04:57:59.223+0000] {databricks_base.py:501} INFO - Using token auth.
+[2024-05-13T04:57:59.556+0000] {databricks.py:67} INFO - Create_presentation_schema_spark_SQL.DDL_presentation_schema completed successfully.
+[2024-05-13T04:57:59.558+0000] {databricks.py:68} INFO - View run status, Spark UI, and logs at https://adb-321042217431130.10.azuredatabricks.net/?o=321042217431130#job/294469495791621/run/572730919196171
+[2024-05-13T04:57:59.559+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-13T04:57:59.568+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=customer_transactions_pipeline, task_id=Create_presentation_schema_spark_SQL.DDL_presentation_schema, execution_date=20240503T020000, start_date=20240513T045727, end_date=20240513T045759
+[2024-05-13T04:57:59.596+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-13T04:57:59.626+0000] {taskinstance.py:3482} INFO - 3 downstream tasks scheduled from follow-on schedule check
+[2024-05-13T04:57:59.628+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-05-13T06:52:36.242+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-13T06:52:36.262+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_transactions_pipeline.Create_presentation_schema_spark_SQL.DDL_presentation_schema scheduled__2024-05-03T02:00:00+00:00 [queued]>
+[2024-05-13T06:52:36.272+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_transactions_pipeline.Create_presentation_schema_spark_SQL.DDL_presentation_schema scheduled__2024-05-03T02:00:00+00:00 [queued]>
+[2024-05-13T06:52:36.273+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2024-05-13T06:52:36.289+0000] {taskinstance.py:2327} INFO - Executing <Task(DatabricksRunNowOperator): Create_presentation_schema_spark_SQL.DDL_presentation_schema> on 2024-05-03 02:00:00+00:00
+[2024-05-13T06:52:36.295+0000] {standard_task_runner.py:63} INFO - Started process 15356 to run task
+[2024-05-13T06:52:36.298+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'customer_transactions_pipeline', 'Create_presentation_schema_spark_SQL.DDL_presentation_schema', 'scheduled__2024-05-03T02:00:00+00:00', '--job-id', '113', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpaj6d6__s']
+[2024-05-13T06:52:36.300+0000] {standard_task_runner.py:91} INFO - Job 113: Subtask Create_presentation_schema_spark_SQL.DDL_presentation_schema
+[2024-05-13T06:52:36.356+0000] {task_command.py:426} INFO - Running <TaskInstance: customer_transactions_pipeline.Create_presentation_schema_spark_SQL.DDL_presentation_schema scheduled__2024-05-03T02:00:00+00:00 [running]> on host f5da772b0226
+[2024-05-13T06:52:36.447+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='mm22@gmail.com' AIRFLOW_CTX_DAG_OWNER='ct' AIRFLOW_CTX_DAG_ID='customer_transactions_pipeline' AIRFLOW_CTX_TASK_ID='Create_presentation_schema_spark_SQL.DDL_presentation_schema' AIRFLOW_CTX_EXECUTION_DATE='2024-05-03T02:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-03T02:00:00+00:00'
+[2024-05-13T06:52:36.448+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-13T06:52:36.471+0000] {base.py:84} INFO - Using connection ID 'databricks_default' for task execution.
+[2024-05-13T06:52:36.473+0000] {databricks_base.py:501} INFO - Using token auth.
+[2024-05-13T06:52:36.907+0000] {databricks.py:56} INFO - Run submitted with run_id: 1053294020846162
+[2024-05-13T06:52:36.908+0000] {databricks_base.py:501} INFO - Using token auth.
+[2024-05-13T06:52:37.305+0000] {databricks_base.py:501} INFO - Using token auth.
+[2024-05-13T06:52:37.643+0000] {databricks.py:109} INFO - Create_presentation_schema_spark_SQL.DDL_presentation_schema in run state: {'life_cycle_state': 'RUNNING', 'result_state': '', 'state_message': ''}
+[2024-05-13T06:52:37.644+0000] {databricks.py:110} INFO - View run status, Spark UI, and logs at https://adb-321042217431130.10.azuredatabricks.net/?o=321042217431130#job/294469495791621/run/1053294020846162
+[2024-05-13T06:52:37.644+0000] {databricks.py:111} INFO - Sleeping for 30 seconds.
+[2024-05-13T06:53:07.661+0000] {databricks_base.py:501} INFO - Using token auth.
+[2024-05-13T06:53:08.042+0000] {databricks.py:67} INFO - Create_presentation_schema_spark_SQL.DDL_presentation_schema completed successfully.
+[2024-05-13T06:53:08.044+0000] {databricks.py:68} INFO - View run status, Spark UI, and logs at https://adb-321042217431130.10.azuredatabricks.net/?o=321042217431130#job/294469495791621/run/1053294020846162
+[2024-05-13T06:53:08.045+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-13T06:53:08.061+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=customer_transactions_pipeline, task_id=Create_presentation_schema_spark_SQL.DDL_presentation_schema, execution_date=20240503T020000, start_date=20240513T065236, end_date=20240513T065308
+[2024-05-13T06:53:08.103+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-13T06:53:08.132+0000] {taskinstance.py:3482} INFO - 3 downstream tasks scheduled from follow-on schedule check
+[2024-05-13T06:53:08.135+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

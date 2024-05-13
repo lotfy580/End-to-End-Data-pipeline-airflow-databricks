@@ -1,0 +1,31 @@
+[2024-05-13T04:47:28.400+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-13T04:47:28.425+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_transactions_pipeline.Process_layer_PySpark.transactions_processing manual__2024-05-13T04:45:13.871143+00:00 [queued]>
+[2024-05-13T04:47:28.435+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_transactions_pipeline.Process_layer_PySpark.transactions_processing manual__2024-05-13T04:45:13.871143+00:00 [queued]>
+[2024-05-13T04:47:28.436+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2024-05-13T04:47:28.454+0000] {taskinstance.py:2327} INFO - Executing <Task(DatabricksRunNowOperator): Process_layer_PySpark.transactions_processing> on 2024-05-13 04:45:13.871143+00:00
+[2024-05-13T04:47:28.460+0000] {standard_task_runner.py:63} INFO - Started process 12525 to run task
+[2024-05-13T04:47:28.464+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'customer_transactions_pipeline', 'Process_layer_PySpark.transactions_processing', 'manual__2024-05-13T04:45:13.871143+00:00', '--job-id', '71', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpz6s0tgyo']
+[2024-05-13T04:47:28.474+0000] {standard_task_runner.py:91} INFO - Job 71: Subtask Process_layer_PySpark.transactions_processing
+[2024-05-13T04:47:28.544+0000] {task_command.py:426} INFO - Running <TaskInstance: customer_transactions_pipeline.Process_layer_PySpark.transactions_processing manual__2024-05-13T04:45:13.871143+00:00 [running]> on host f5da772b0226
+[2024-05-13T04:47:28.635+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='mm22@gmail.com' AIRFLOW_CTX_DAG_OWNER='ct' AIRFLOW_CTX_DAG_ID='customer_transactions_pipeline' AIRFLOW_CTX_TASK_ID='Process_layer_PySpark.transactions_processing' AIRFLOW_CTX_EXECUTION_DATE='2024-05-13T04:45:13.871143+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-13T04:45:13.871143+00:00'
+[2024-05-13T04:47:28.637+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-13T04:47:28.660+0000] {base.py:84} INFO - Using connection ID 'databricks_default' for task execution.
+[2024-05-13T04:47:28.663+0000] {databricks_base.py:501} INFO - Using token auth.
+[2024-05-13T04:47:29.082+0000] {databricks.py:56} INFO - Run submitted with run_id: 358684055268763
+[2024-05-13T04:47:29.083+0000] {databricks_base.py:501} INFO - Using token auth.
+[2024-05-13T04:47:29.425+0000] {databricks_base.py:501} INFO - Using token auth.
+[2024-05-13T04:47:29.734+0000] {databricks.py:109} INFO - Process_layer_PySpark.transactions_processing in run state: {'life_cycle_state': 'RUNNING', 'result_state': '', 'state_message': ''}
+[2024-05-13T04:47:29.735+0000] {databricks.py:110} INFO - View run status, Spark UI, and logs at https://adb-321042217431130.10.azuredatabricks.net/?o=321042217431130#job/553064271720425/run/358684055268763
+[2024-05-13T04:47:29.735+0000] {databricks.py:111} INFO - Sleeping for 30 seconds.
+[2024-05-13T04:47:59.743+0000] {databricks_base.py:501} INFO - Using token auth.
+[2024-05-13T04:48:00.032+0000] {databricks.py:109} INFO - Process_layer_PySpark.transactions_processing in run state: {'life_cycle_state': 'RUNNING', 'result_state': '', 'state_message': ''}
+[2024-05-13T04:48:00.033+0000] {databricks.py:110} INFO - View run status, Spark UI, and logs at https://adb-321042217431130.10.azuredatabricks.net/?o=321042217431130#job/553064271720425/run/358684055268763
+[2024-05-13T04:48:00.033+0000] {databricks.py:111} INFO - Sleeping for 30 seconds.
+[2024-05-13T04:48:30.039+0000] {databricks_base.py:501} INFO - Using token auth.
+[2024-05-13T04:48:30.429+0000] {databricks.py:67} INFO - Process_layer_PySpark.transactions_processing completed successfully.
+[2024-05-13T04:48:30.430+0000] {databricks.py:68} INFO - View run status, Spark UI, and logs at https://adb-321042217431130.10.azuredatabricks.net/?o=321042217431130#job/553064271720425/run/358684055268763
+[2024-05-13T04:48:30.430+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-13T04:48:30.440+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=customer_transactions_pipeline, task_id=Process_layer_PySpark.transactions_processing, execution_date=20240513T044513, start_date=20240513T044728, end_date=20240513T044830
+[2024-05-13T04:48:30.481+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-13T04:48:30.553+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-13T04:48:30.556+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

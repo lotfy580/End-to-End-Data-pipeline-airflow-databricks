@@ -1,0 +1,128 @@
+[2024-05-12T12:39:27.589+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-12T12:39:27.613+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_transactions_pipeline.extract_load_fivetran.wait_for_EL scheduled__2024-05-03T02:00:00+00:00 [queued]>
+[2024-05-12T12:39:27.626+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_transactions_pipeline.extract_load_fivetran.wait_for_EL scheduled__2024-05-03T02:00:00+00:00 [queued]>
+[2024-05-12T12:39:27.627+0000] {taskinstance.py:2303} INFO - Starting attempt 3 of 3
+[2024-05-12T12:39:27.645+0000] {taskinstance.py:2327} INFO - Executing <Task(FivetranSensor): extract_load_fivetran.wait_for_EL> on 2024-05-03 02:00:00+00:00
+[2024-05-12T12:39:27.651+0000] {standard_task_runner.py:63} INFO - Started process 2626 to run task
+[2024-05-12T12:39:27.658+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'customer_transactions_pipeline', 'extract_load_fivetran.wait_for_EL', 'scheduled__2024-05-03T02:00:00+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp5awxj6sl']
+[2024-05-12T12:39:27.660+0000] {standard_task_runner.py:91} INFO - Job 22: Subtask extract_load_fivetran.wait_for_EL
+[2024-05-12T12:39:27.726+0000] {task_command.py:426} INFO - Running <TaskInstance: customer_transactions_pipeline.extract_load_fivetran.wait_for_EL scheduled__2024-05-03T02:00:00+00:00 [running]> on host f5da772b0226
+[2024-05-12T12:39:27.847+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='mm22@gmail.com' AIRFLOW_CTX_DAG_OWNER='ct' AIRFLOW_CTX_DAG_ID='customer_transactions_pipeline' AIRFLOW_CTX_TASK_ID='extract_load_fivetran.wait_for_EL' AIRFLOW_CTX_EXECUTION_DATE='2024-05-03T02:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-03T02:00:00+00:00'
+[2024-05-12T12:39:27.849+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-12T12:39:27.875+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-12T12:39:27.884+0000] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/fivetran_provider_async/sensors.py", line 149, in execute
+    elif not self.poke(context):
+  File "/home/airflow/.local/lib/python3.9/site-packages/fivetran_provider_async/sensors.py", line 198, in poke
+    self._completed_after_time_rendered = self.hook.get_last_sync(self.connector_id)
+  File "/home/airflow/.local/lib/python3.9/site-packages/fivetran_provider_async/hooks.py", line 406, in get_last_sync
+    connector_details = self.get_connector(connector_id)
+  File "/home/airflow/.local/lib/python3.9/site-packages/fivetran_provider_async/hooks.py", line 210, in get_connector
+    resp = self._do_api_call("GET", endpoint)
+  File "/home/airflow/.local/lib/python3.9/site-packages/fivetran_provider_async/hooks.py", line 152, in _do_api_call
+    self.fivetran_conn = self.get_connection(self.conn_id)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/hooks/base.py", line 83, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/connection.py", line 519, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `fivetran_detault` isn't defined
+[2024-05-12T12:39:27.890+0000] {taskinstance.py:1205} INFO - Marking task as FAILED. dag_id=customer_transactions_pipeline, task_id=extract_load_fivetran.wait_for_EL, execution_date=20240503T020000, start_date=20240512T123927, end_date=20240512T123927
+[2024-05-12T12:39:27.912+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/utils/email.py:154 RemovedInAirflow3Warning: Fetching SMTP credentials from configuration variables will be deprecated in a future release. Please set credentials using a connection instead.
+[2024-05-12T12:39:27.913+0000] {configuration.py:1050} WARNING - section/key [smtp/smtp_user] not found in config
+[2024-05-12T12:39:27.913+0000] {email.py:271} INFO - Email alerting: attempt 1
+[2024-05-12T12:39:27.920+0000] {configuration.py:1050} WARNING - section/key [smtp/smtp_user] not found in config
+[2024-05-12T12:39:27.921+0000] {email.py:271} INFO - Email alerting: attempt 1
+[2024-05-12T12:39:27.922+0000] {taskinstance.py:879} ERROR - Failed to send email to: mm22@gmail.com
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 2476, in _run_raw_task
+    self._execute_task_with_callbacks(context, test_mode, session=session)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 2663, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 2686, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/fivetran_provider_async/sensors.py", line 149, in execute
+    elif not self.poke(context):
+  File "/home/airflow/.local/lib/python3.9/site-packages/fivetran_provider_async/sensors.py", line 198, in poke
+    self._completed_after_time_rendered = self.hook.get_last_sync(self.connector_id)
+  File "/home/airflow/.local/lib/python3.9/site-packages/fivetran_provider_async/hooks.py", line 406, in get_last_sync
+    connector_details = self.get_connector(connector_id)
+  File "/home/airflow/.local/lib/python3.9/site-packages/fivetran_provider_async/hooks.py", line 210, in get_connector
+    resp = self._do_api_call("GET", endpoint)
+  File "/home/airflow/.local/lib/python3.9/site-packages/fivetran_provider_async/hooks.py", line 152, in _do_api_call
+    self.fivetran_conn = self.get_connection(self.conn_id)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/hooks/base.py", line 83, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/connection.py", line 519, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `fivetran_detault` isn't defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 1063, in _email_alert
+    send_email(task.email, subject, html_content)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/email.py", line 80, in send_email
+    return backend(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/email.py", line 154, in send_email_smtp
+    send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/email.py", line 273, in send_mime_email
+    smtp_conn = _get_smtp_connection(smtp_host, smtp_port, smtp_timeout, smtp_ssl)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/email.py", line 317, in _get_smtp_connection
+    return smtplib.SMTP(host=host, port=port, timeout=timeout)
+  File "/usr/local/lib/python3.9/smtplib.py", line 255, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/local/lib/python3.9/smtplib.py", line 341, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/local/lib/python3.9/smtplib.py", line 312, in _get_socket
+    return socket.create_connection((host, port), timeout,
+  File "/usr/local/lib/python3.9/socket.py", line 844, in create_connection
+    raise err
+  File "/usr/local/lib/python3.9/socket.py", line 832, in create_connection
+    sock.connect(sa)
+OSError: [Errno 99] Cannot assign requested address
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 877, in _handle_failure
+    task_instance.email_alert(error, failure_context["task"])
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3148, in email_alert
+    _email_alert(task_instance=self, exception=exception, task=task)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 1065, in _email_alert
+    send_email(task.email, subject, html_content_err)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/email.py", line 80, in send_email
+    return backend(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/email.py", line 154, in send_email_smtp
+    send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/email.py", line 273, in send_mime_email
+    smtp_conn = _get_smtp_connection(smtp_host, smtp_port, smtp_timeout, smtp_ssl)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/email.py", line 317, in _get_smtp_connection
+    return smtplib.SMTP(host=host, port=port, timeout=timeout)
+  File "/usr/local/lib/python3.9/smtplib.py", line 255, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/local/lib/python3.9/smtplib.py", line 341, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/local/lib/python3.9/smtplib.py", line 312, in _get_socket
+    return socket.create_connection((host, port), timeout,
+  File "/usr/local/lib/python3.9/socket.py", line 844, in create_connection
+    raise err
+  File "/usr/local/lib/python3.9/socket.py", line 832, in create_connection
+    sock.connect(sa)
+OSError: [Errno 99] Cannot assign requested address
+[2024-05-12T12:39:27.938+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 22 for task extract_load_fivetran.wait_for_EL (The conn_id `fivetran_detault` isn't defined; 2626)
+[2024-05-12T12:39:27.950+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-05-12T12:39:27.967+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-12T12:39:27.969+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

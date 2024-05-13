@@ -1,0 +1,42 @@
+[2024-05-13T04:45:21.258+0000] {base.py:84} INFO - Using connection ID 'fivetran_default' for task execution.
+[2024-05-13T04:45:22.496+0000] {hooks.py:487} INFO - Connector rescue_aerobics: sync_state = scheduled
+[2024-05-13T04:45:22.496+0000] {triggers.py:89} INFO - sync is still running...
+[2024-05-13T04:45:22.496+0000] {triggers.py:90} INFO - sleeping for 15 seconds.
+[2024-05-13T04:45:38.135+0000] {hooks.py:487} INFO - Connector rescue_aerobics: sync_state = syncing
+[2024-05-13T04:45:38.136+0000] {triggers.py:89} INFO - sync is still running...
+[2024-05-13T04:45:38.136+0000] {triggers.py:90} INFO - sleeping for 15 seconds.
+[2024-05-13T04:45:53.872+0000] {hooks.py:487} INFO - Connector rescue_aerobics: sync_state = scheduled
+[2024-05-13T04:45:53.872+0000] {hooks.py:508} INFO - Connector rescue_aerobics: succeeded_at: 2024-05-13T04:45:53.322000Z
+[2024-05-13T04:45:54.549+0000] {triggerer_job_runner.py:602} INFO - Trigger customer_transactions_pipeline/scheduled__2024-05-03T02:00:00+00:00/Ingestion_Fivetran.MongoDB_to_AzureStorage/-1/1 (ID 19) fired: TriggerEvent<{'status': 'success', 'message': 'Fivetran connector rescue_aerobics finished syncing at 2024-05-13 04:45:53.322000+00:00', 'return_value': '2024-05-13T04:45:53.322000Z'}>
+[2024-05-13T04:45:55.242+0000] {hooks.py:487} INFO - Connector rescue_aerobics: sync_state = scheduled
+[2024-05-13T04:45:55.243+0000] {triggers.py:89} INFO - sync is still running...
+[2024-05-13T04:45:55.244+0000] {triggers.py:90} INFO - sleeping for 15 seconds.
+[2024-05-13T04:54:46.819+0000] {base.py:84} INFO - Using connection ID 'fivetran_default' for task execution.
+[2024-05-13T04:54:48.188+0000] {hooks.py:487} INFO - Connector rescue_aerobics: sync_state = scheduled
+[2024-05-13T04:54:48.188+0000] {triggers.py:89} INFO - sync is still running...
+[2024-05-13T04:54:48.188+0000] {triggers.py:90} INFO - sleeping for 15 seconds.
+[2024-05-13T04:55:03.795+0000] {hooks.py:487} INFO - Connector rescue_aerobics: sync_state = syncing
+[2024-05-13T04:55:03.796+0000] {triggers.py:89} INFO - sync is still running...
+[2024-05-13T04:55:03.796+0000] {triggers.py:90} INFO - sleeping for 15 seconds.
+[2024-05-13T04:55:19.408+0000] {hooks.py:487} INFO - Connector rescue_aerobics: sync_state = scheduled
+[2024-05-13T04:55:19.409+0000] {hooks.py:508} INFO - Connector rescue_aerobics: succeeded_at: 2024-05-13T04:55:19.408000Z
+[2024-05-13T04:55:20.020+0000] {triggerer_job_runner.py:602} INFO - Trigger customer_transactions_pipeline/scheduled__2024-05-03T02:00:00+00:00/Ingestion_Fivetran.MongoDB_to_AzureStorage/-1/1 (ID 22) fired: TriggerEvent<{'status': 'success', 'message': 'Fivetran connector rescue_aerobics finished syncing at 2024-05-13 04:55:19.408000+00:00', 'return_value': '2024-05-13T04:55:19.408000Z'}>
+[2024-05-13T04:55:20.617+0000] {hooks.py:487} INFO - Connector rescue_aerobics: sync_state = scheduled
+[2024-05-13T04:55:20.618+0000] {triggers.py:89} INFO - sync is still running...
+[2024-05-13T04:55:20.618+0000] {triggers.py:90} INFO - sleeping for 15 seconds.
+[2024-05-13T06:49:25.398+0000] {base.py:84} INFO - Using connection ID 'fivetran_default' for task execution.
+[2024-05-13T06:49:26.616+0000] {hooks.py:487} INFO - Connector rescue_aerobics: sync_state = scheduled
+[2024-05-13T06:49:26.616+0000] {triggers.py:89} INFO - sync is still running...
+[2024-05-13T06:49:26.616+0000] {triggers.py:90} INFO - sleeping for 15 seconds.
+[2024-05-13T06:49:42.233+0000] {hooks.py:487} INFO - Connector rescue_aerobics: sync_state = syncing
+[2024-05-13T06:49:42.233+0000] {triggers.py:89} INFO - sync is still running...
+[2024-05-13T06:49:42.233+0000] {triggers.py:90} INFO - sleeping for 15 seconds.
+[2024-05-13T06:49:57.850+0000] {hooks.py:487} INFO - Connector rescue_aerobics: sync_state = syncing
+[2024-05-13T06:49:57.850+0000] {triggers.py:89} INFO - sync is still running...
+[2024-05-13T06:49:57.850+0000] {triggers.py:90} INFO - sleeping for 15 seconds.
+[2024-05-13T06:50:13.448+0000] {hooks.py:487} INFO - Connector rescue_aerobics: sync_state = scheduled
+[2024-05-13T06:50:13.449+0000] {hooks.py:508} INFO - Connector rescue_aerobics: succeeded_at: 2024-05-13T06:50:04.841000Z
+[2024-05-13T06:50:14.059+0000] {triggerer_job_runner.py:602} INFO - Trigger customer_transactions_pipeline/scheduled__2024-05-03T02:00:00+00:00/Ingestion_Fivetran.MongoDB_to_AzureStorage/-1/1 (ID 26) fired: TriggerEvent<{'status': 'success', 'message': 'Fivetran connector rescue_aerobics finished syncing at 2024-05-13 06:50:04.841000+00:00', 'return_value': '2024-05-13T06:50:04.841000Z'}>
+[2024-05-13T06:50:14.678+0000] {hooks.py:487} INFO - Connector rescue_aerobics: sync_state = scheduled
+[2024-05-13T06:50:14.678+0000] {triggers.py:89} INFO - sync is still running...
+[2024-05-13T06:50:14.679+0000] {triggers.py:90} INFO - sleeping for 15 seconds.

@@ -1,0 +1,42 @@
+[2024-05-03T09:19:42.894+0000] {processor.py:161} INFO - Started process (PID=169) to work on /opt/airflow/dags/blab.py
+[2024-05-03T09:19:42.895+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/blab.py for tasks to queue
+[2024-05-03T09:19:42.897+0000] {logging_mixin.py:188} INFO - [2024-05-03T09:19:42.896+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/blab.py
+[2024-05-03T09:19:43.548+0000] {logging_mixin.py:188} INFO - [2024-05-03T09:19:43.544+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/blab.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/opt/airflow/dags/blab.py", line 64, in <module>
+    python_callable=extrect3
+NameError: name 'extrect3' is not defined
+[2024-05-03T09:19:43.550+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/blab.py
+[2024-05-03T09:19:43.565+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/blab.py took 0.678 seconds
+[2024-05-03T09:20:13.791+0000] {processor.py:161} INFO - Started process (PID=181) to work on /opt/airflow/dags/blab.py
+[2024-05-03T09:20:13.792+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/blab.py for tasks to queue
+[2024-05-03T09:20:13.793+0000] {logging_mixin.py:188} INFO - [2024-05-03T09:20:13.793+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/blab.py
+[2024-05-03T09:20:14.084+0000] {logging_mixin.py:188} INFO - [2024-05-03T09:20:14.079+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/blab.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/opt/airflow/dags/blab.py", line 64, in <module>
+    python_callable=extrect3
+NameError: name 'extrect3' is not defined
+[2024-05-03T09:20:14.086+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/blab.py
+[2024-05-03T09:20:14.103+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/blab.py took 0.318 seconds
+[2024-05-03T09:20:44.332+0000] {processor.py:161} INFO - Started process (PID=193) to work on /opt/airflow/dags/blab.py
+[2024-05-03T09:20:44.334+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/blab.py for tasks to queue
+[2024-05-03T09:20:44.337+0000] {logging_mixin.py:188} INFO - [2024-05-03T09:20:44.337+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/blab.py
+[2024-05-03T09:20:44.660+0000] {logging_mixin.py:188} INFO - [2024-05-03T09:20:44.655+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/blab.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/opt/airflow/dags/blab.py", line 64, in <module>
+    python_callable=extrect3
+NameError: name 'extrect3' is not defined
+[2024-05-03T09:20:44.661+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/blab.py
+[2024-05-03T09:20:44.681+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/blab.py took 0.360 seconds

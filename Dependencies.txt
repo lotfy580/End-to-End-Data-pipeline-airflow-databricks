@@ -1,0 +1,2 @@
+airflow-provider-fivetran-async==2.0.2
+apache-airflow-providers-databricks==6.4.0

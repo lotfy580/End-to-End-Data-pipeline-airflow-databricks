@@ -1,0 +1,10 @@
+[2024-05-13T04:45:18.258+0000] {base.py:84} INFO - Using connection ID 'fivetran_default' for task execution.
+[2024-05-13T04:45:19.544+0000] {hooks.py:487} INFO - Connector rescue_aerobics: sync_state = scheduled
+[2024-05-13T04:45:19.544+0000] {triggers.py:89} INFO - sync is still running...
+[2024-05-13T04:45:19.544+0000] {triggers.py:90} INFO - sleeping for 60.0 seconds.
+[2024-05-13T04:46:20.225+0000] {hooks.py:487} INFO - Connector rescue_aerobics: sync_state = scheduled
+[2024-05-13T04:46:20.225+0000] {hooks.py:508} INFO - Connector rescue_aerobics: succeeded_at: 2024-05-13T04:45:53.322000Z
+[2024-05-13T04:46:20.804+0000] {triggerer_job_runner.py:602} INFO - Trigger customer_transactions_pipeline/manual__2024-05-13T04:45:13.871143+00:00/Ingestion_Fivetran.wait_for_ingestion/-1/1 (ID 17) fired: TriggerEvent<{'status': 'success', 'message': 'Fivetran connector rescue_aerobics finished syncing at 2024-05-13 04:45:53.322000+00:00', 'return_value': '2024-05-13T04:45:53.322000Z'}>
+[2024-05-13T04:46:21.400+0000] {hooks.py:487} INFO - Connector rescue_aerobics: sync_state = scheduled
+[2024-05-13T04:46:21.400+0000] {triggers.py:89} INFO - sync is still running...
+[2024-05-13T04:46:21.400+0000] {triggers.py:90} INFO - sleeping for 60.0 seconds.

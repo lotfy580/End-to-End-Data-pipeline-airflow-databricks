@@ -1,0 +1,35 @@
+[2024-05-12T12:24:09.485+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-12T12:24:09.503+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_transactions_pipeline.extract_load_fivetran.MongoDB_to_AzureStorage scheduled__2024-05-03T02:00:00+00:00 [queued]>
+[2024-05-12T12:24:09.512+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_transactions_pipeline.extract_load_fivetran.MongoDB_to_AzureStorage scheduled__2024-05-03T02:00:00+00:00 [queued]>
+[2024-05-12T12:24:09.512+0000] {taskinstance.py:2303} INFO - Starting attempt 2 of 3
+[2024-05-12T12:24:09.525+0000] {taskinstance.py:2327} INFO - Executing <Task(FivetranOperator): extract_load_fivetran.MongoDB_to_AzureStorage> on 2024-05-03 02:00:00+00:00
+[2024-05-12T12:24:09.530+0000] {standard_task_runner.py:63} INFO - Started process 2279 to run task
+[2024-05-12T12:24:09.534+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'customer_transactions_pipeline', 'extract_load_fivetran.MongoDB_to_AzureStorage', 'scheduled__2024-05-03T02:00:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpfir_agdv']
+[2024-05-12T12:24:09.536+0000] {standard_task_runner.py:91} INFO - Job 16: Subtask extract_load_fivetran.MongoDB_to_AzureStorage
+[2024-05-12T12:24:09.591+0000] {task_command.py:426} INFO - Running <TaskInstance: customer_transactions_pipeline.extract_load_fivetran.MongoDB_to_AzureStorage scheduled__2024-05-03T02:00:00+00:00 [running]> on host f5da772b0226
+[2024-05-12T12:24:09.677+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='mm22@gmail.com' AIRFLOW_CTX_DAG_OWNER='ct' AIRFLOW_CTX_DAG_ID='customer_transactions_pipeline' AIRFLOW_CTX_TASK_ID='extract_load_fivetran.MongoDB_to_AzureStorage' AIRFLOW_CTX_EXECUTION_DATE='2024-05-03T02:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-03T02:00:00+00:00'
+[2024-05-12T12:24:09.678+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-12T12:24:09.704+0000] {base.py:84} INFO - Using connection ID 'fivetran_default' for task execution.
+[2024-05-12T12:24:10.458+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-12T12:24:10.467+0000] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/fivetran_provider_async/operators.py", line 102, in execute
+    hook.prep_connector(self.connector_id, self.schedule_type)
+  File "/home/airflow/.local/lib/python3.9/site-packages/fivetran_provider_async/hooks.py", line 346, in prep_connector
+    connector_details = self.check_connector(connector_id)
+  File "/home/airflow/.local/lib/python3.9/site-packages/fivetran_provider_async/hooks.py", line 315, in check_connector
+    raise AirflowException(
+airflow.exceptions.AirflowException: Fivetran connector "rescue_aerobics" not correctly configured, status: broken
+Please see: https://fivetran.com/dashboard/connectors/mongo/mongo/setup
+[2024-05-12T12:24:10.470+0000] {taskinstance.py:1205} INFO - Marking task as UP_FOR_RETRY. dag_id=customer_transactions_pipeline, task_id=extract_load_fivetran.MongoDB_to_AzureStorage, execution_date=20240503T020000, start_date=20240512T122409, end_date=20240512T122410
+[2024-05-12T12:24:10.486+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 16 for task extract_load_fivetran.MongoDB_to_AzureStorage (Fivetran connector "rescue_aerobics" not correctly configured, status: broken
+Please see: https://fivetran.com/dashboard/connectors/mongo/mongo/setup; 2279)
+[2024-05-12T12:24:10.510+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-05-12T12:24:10.531+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-12T12:24:10.536+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

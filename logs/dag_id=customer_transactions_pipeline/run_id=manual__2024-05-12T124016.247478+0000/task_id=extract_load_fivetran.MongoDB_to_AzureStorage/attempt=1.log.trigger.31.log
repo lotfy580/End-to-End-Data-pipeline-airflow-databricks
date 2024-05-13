@@ -1,0 +1,10 @@
+[2024-05-12T12:43:02.217+0000] {base.py:84} INFO - Using connection ID 'fivetran_default' for task execution.
+[2024-05-12T12:43:03.561+0000] {hooks.py:487} INFO - Connector rescue_aerobics: sync_state = scheduled
+[2024-05-12T12:43:03.562+0000] {triggers.py:89} INFO - sync is still running...
+[2024-05-12T12:43:03.562+0000] {triggers.py:90} INFO - sleeping for 15 seconds.
+[2024-05-12T12:43:19.217+0000] {hooks.py:487} INFO - Connector rescue_aerobics: sync_state = scheduled
+[2024-05-12T12:43:19.217+0000] {triggers.py:89} INFO - sync is still running...
+[2024-05-12T12:43:19.217+0000] {triggers.py:90} INFO - sleeping for 15 seconds.
+[2024-05-12T12:43:34.873+0000] {hooks.py:487} INFO - Connector rescue_aerobics: sync_state = scheduled
+[2024-05-12T12:43:34.873+0000] {triggers.py:89} INFO - sync is still running...
+[2024-05-12T12:43:34.873+0000] {triggers.py:90} INFO - sleeping for 15 seconds.

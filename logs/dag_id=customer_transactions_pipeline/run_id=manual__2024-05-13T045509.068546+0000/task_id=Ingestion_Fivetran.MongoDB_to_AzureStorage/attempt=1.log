@@ -1,0 +1,36 @@
+[2024-05-13T04:55:10.772+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-13T04:55:10.795+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_transactions_pipeline.Ingestion_Fivetran.MongoDB_to_AzureStorage manual__2024-05-13T04:55:09.068546+00:00 [queued]>
+[2024-05-13T04:55:10.806+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_transactions_pipeline.Ingestion_Fivetran.MongoDB_to_AzureStorage manual__2024-05-13T04:55:09.068546+00:00 [queued]>
+[2024-05-13T04:55:10.807+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2024-05-13T04:55:10.823+0000] {taskinstance.py:2327} INFO - Executing <Task(FivetranOperator): Ingestion_Fivetran.MongoDB_to_AzureStorage> on 2024-05-13 04:55:09.068546+00:00
+[2024-05-13T04:55:10.828+0000] {standard_task_runner.py:63} INFO - Started process 12715 to run task
+[2024-05-13T04:55:10.833+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'customer_transactions_pipeline', 'Ingestion_Fivetran.MongoDB_to_AzureStorage', 'manual__2024-05-13T04:55:09.068546+00:00', '--job-id', '79', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp7x1gtovv']
+[2024-05-13T04:55:10.836+0000] {standard_task_runner.py:91} INFO - Job 79: Subtask Ingestion_Fivetran.MongoDB_to_AzureStorage
+[2024-05-13T04:55:10.894+0000] {task_command.py:426} INFO - Running <TaskInstance: customer_transactions_pipeline.Ingestion_Fivetran.MongoDB_to_AzureStorage manual__2024-05-13T04:55:09.068546+00:00 [running]> on host f5da772b0226
+[2024-05-13T04:55:10.982+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='mm22@gmail.com' AIRFLOW_CTX_DAG_OWNER='ct' AIRFLOW_CTX_DAG_ID='customer_transactions_pipeline' AIRFLOW_CTX_TASK_ID='Ingestion_Fivetran.MongoDB_to_AzureStorage' AIRFLOW_CTX_EXECUTION_DATE='2024-05-13T04:55:09.068546+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-13T04:55:09.068546+00:00'
+[2024-05-13T04:55:10.983+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-13T04:55:11.011+0000] {base.py:84} INFO - Using connection ID 'fivetran_default' for task execution.
+[2024-05-13T04:55:11.676+0000] {hooks.py:320} INFO - Connector type: mongo, connector schema: mongo
+[2024-05-13T04:55:11.677+0000] {hooks.py:321} INFO - Connectors logs at https://fivetran.com/dashboard/connectors/mongo/mongo/logs
+[2024-05-13T04:55:15.015+0000] {hooks.py:487} INFO - Connector rescue_aerobics: sync_state = syncing
+[2024-05-13T04:55:15.016+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-13T04:55:15.017+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2024-05-13T04:55:15.027+0000] {taskinstance.py:2486} INFO - Pausing task as DEFERRED. dag_id=customer_transactions_pipeline, task_id=Ingestion_Fivetran.MongoDB_to_AzureStorage, execution_date=20240513T045509, start_date=20240513T045510
+[2024-05-13T04:55:15.059+0000] {local_task_job_runner.py:237} INFO - Task exited with return code 100 (task deferral)
+[2024-05-13T04:55:15.060+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-05-13T04:55:35.866+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-13T04:55:35.883+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_transactions_pipeline.Ingestion_Fivetran.MongoDB_to_AzureStorage manual__2024-05-13T04:55:09.068546+00:00 [queued]>
+[2024-05-13T04:55:35.890+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_transactions_pipeline.Ingestion_Fivetran.MongoDB_to_AzureStorage manual__2024-05-13T04:55:09.068546+00:00 [queued]>
+[2024-05-13T04:55:35.891+0000] {taskinstance.py:2301} INFO - Resuming after deferral
+[2024-05-13T04:55:35.903+0000] {taskinstance.py:2327} INFO - Executing <Task(FivetranOperator): Ingestion_Fivetran.MongoDB_to_AzureStorage> on 2024-05-13 04:55:09.068546+00:00
+[2024-05-13T04:55:35.907+0000] {standard_task_runner.py:63} INFO - Started process 12724 to run task
+[2024-05-13T04:55:35.910+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'customer_transactions_pipeline', 'Ingestion_Fivetran.MongoDB_to_AzureStorage', 'manual__2024-05-13T04:55:09.068546+00:00', '--job-id', '82', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpkdq4lu_u']
+[2024-05-13T04:55:35.912+0000] {standard_task_runner.py:91} INFO - Job 82: Subtask Ingestion_Fivetran.MongoDB_to_AzureStorage
+[2024-05-13T04:55:35.957+0000] {task_command.py:426} INFO - Running <TaskInstance: customer_transactions_pipeline.Ingestion_Fivetran.MongoDB_to_AzureStorage manual__2024-05-13T04:55:09.068546+00:00 [running]> on host f5da772b0226
+[2024-05-13T04:55:36.029+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-13T04:55:36.030+0000] {operators.py:172} INFO - Fivetran connector rescue_aerobics finished syncing at 2024-05-13 04:55:19.408000+00:00
+[2024-05-13T04:55:36.030+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-13T04:55:36.052+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=customer_transactions_pipeline, task_id=Ingestion_Fivetran.MongoDB_to_AzureStorage, execution_date=20240513T045509, start_date=20240513T045510, end_date=20240513T045536
+[2024-05-13T04:55:36.082+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-13T04:55:36.111+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-13T04:55:36.113+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

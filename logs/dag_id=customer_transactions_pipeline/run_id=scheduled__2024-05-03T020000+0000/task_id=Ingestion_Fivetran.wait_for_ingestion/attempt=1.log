@@ -1,0 +1,102 @@
+[2024-05-13T04:45:15.556+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-13T04:45:15.582+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_transactions_pipeline.Ingestion_Fivetran.wait_for_ingestion scheduled__2024-05-03T02:00:00+00:00 [queued]>
+[2024-05-13T04:45:15.594+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_transactions_pipeline.Ingestion_Fivetran.wait_for_ingestion scheduled__2024-05-03T02:00:00+00:00 [queued]>
+[2024-05-13T04:45:15.595+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2024-05-13T04:45:15.623+0000] {taskinstance.py:2327} INFO - Executing <Task(FivetranSensor): Ingestion_Fivetran.wait_for_ingestion> on 2024-05-03 02:00:00+00:00
+[2024-05-13T04:45:15.634+0000] {standard_task_runner.py:63} INFO - Started process 12458 to run task
+[2024-05-13T04:45:15.645+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'customer_transactions_pipeline', 'Ingestion_Fivetran.wait_for_ingestion', 'scheduled__2024-05-03T02:00:00+00:00', '--job-id', '59', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpf49mlk00']
+[2024-05-13T04:45:15.656+0000] {standard_task_runner.py:91} INFO - Job 59: Subtask Ingestion_Fivetran.wait_for_ingestion
+[2024-05-13T04:45:15.795+0000] {task_command.py:426} INFO - Running <TaskInstance: customer_transactions_pipeline.Ingestion_Fivetran.wait_for_ingestion scheduled__2024-05-03T02:00:00+00:00 [running]> on host f5da772b0226
+[2024-05-13T04:45:15.970+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='mm22@gmail.com' AIRFLOW_CTX_DAG_OWNER='ct' AIRFLOW_CTX_DAG_ID='customer_transactions_pipeline' AIRFLOW_CTX_TASK_ID='Ingestion_Fivetran.wait_for_ingestion' AIRFLOW_CTX_EXECUTION_DATE='2024-05-03T02:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-03T02:00:00+00:00'
+[2024-05-13T04:45:15.972+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-13T04:45:16.020+0000] {base.py:84} INFO - Using connection ID 'fivetran_default' for task execution.
+[2024-05-13T04:45:17.401+0000] {hooks.py:487} INFO - Connector rescue_aerobics: sync_state = scheduled
+[2024-05-13T04:45:17.402+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-13T04:45:17.405+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2024-05-13T04:45:17.418+0000] {taskinstance.py:2486} INFO - Pausing task as DEFERRED. dag_id=customer_transactions_pipeline, task_id=Ingestion_Fivetran.wait_for_ingestion, execution_date=20240503T020000, start_date=20240513T044515
+[2024-05-13T04:45:17.470+0000] {local_task_job_runner.py:237} INFO - Task exited with return code 100 (task deferral)
+[2024-05-13T04:45:17.471+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-05-13T04:46:21.918+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-13T04:46:21.940+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_transactions_pipeline.Ingestion_Fivetran.wait_for_ingestion scheduled__2024-05-03T02:00:00+00:00 [queued]>
+[2024-05-13T04:46:21.949+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_transactions_pipeline.Ingestion_Fivetran.wait_for_ingestion scheduled__2024-05-03T02:00:00+00:00 [queued]>
+[2024-05-13T04:46:21.950+0000] {taskinstance.py:2301} INFO - Resuming after deferral
+[2024-05-13T04:46:21.964+0000] {taskinstance.py:2327} INFO - Executing <Task(FivetranSensor): Ingestion_Fivetran.wait_for_ingestion> on 2024-05-03 02:00:00+00:00
+[2024-05-13T04:46:21.968+0000] {standard_task_runner.py:63} INFO - Started process 12489 to run task
+[2024-05-13T04:46:21.971+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'customer_transactions_pipeline', 'Ingestion_Fivetran.wait_for_ingestion', 'scheduled__2024-05-03T02:00:00+00:00', '--job-id', '64', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp3bbkx0if']
+[2024-05-13T04:46:21.973+0000] {standard_task_runner.py:91} INFO - Job 64: Subtask Ingestion_Fivetran.wait_for_ingestion
+[2024-05-13T04:46:22.019+0000] {task_command.py:426} INFO - Running <TaskInstance: customer_transactions_pipeline.Ingestion_Fivetran.wait_for_ingestion scheduled__2024-05-03T02:00:00+00:00 [running]> on host f5da772b0226
+[2024-05-13T04:46:22.088+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-13T04:46:22.088+0000] {sensors.py:221} INFO - Fivetran connector rescue_aerobics finished syncing at 2024-05-13 04:45:53.322000+00:00
+[2024-05-13T04:46:22.089+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-13T04:46:22.098+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=customer_transactions_pipeline, task_id=Ingestion_Fivetran.wait_for_ingestion, execution_date=20240503T020000, start_date=20240513T044515, end_date=20240513T044622
+[2024-05-13T04:46:22.144+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-13T04:46:22.191+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-05-13T04:46:22.193+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-05-13T04:54:41.552+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-13T04:54:41.571+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_transactions_pipeline.Ingestion_Fivetran.wait_for_ingestion scheduled__2024-05-03T02:00:00+00:00 [queued]>
+[2024-05-13T04:54:41.581+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_transactions_pipeline.Ingestion_Fivetran.wait_for_ingestion scheduled__2024-05-03T02:00:00+00:00 [queued]>
+[2024-05-13T04:54:41.582+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2024-05-13T04:54:41.598+0000] {taskinstance.py:2327} INFO - Executing <Task(FivetranSensor): Ingestion_Fivetran.wait_for_ingestion> on 2024-05-03 02:00:00+00:00
+[2024-05-13T04:54:41.606+0000] {standard_task_runner.py:63} INFO - Started process 12699 to run task
+[2024-05-13T04:54:41.610+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'customer_transactions_pipeline', 'Ingestion_Fivetran.wait_for_ingestion', 'scheduled__2024-05-03T02:00:00+00:00', '--job-id', '77', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpcr2cqokb']
+[2024-05-13T04:54:41.612+0000] {standard_task_runner.py:91} INFO - Job 77: Subtask Ingestion_Fivetran.wait_for_ingestion
+[2024-05-13T04:54:41.666+0000] {task_command.py:426} INFO - Running <TaskInstance: customer_transactions_pipeline.Ingestion_Fivetran.wait_for_ingestion scheduled__2024-05-03T02:00:00+00:00 [running]> on host f5da772b0226
+[2024-05-13T04:54:41.755+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='mm22@gmail.com' AIRFLOW_CTX_DAG_OWNER='ct' AIRFLOW_CTX_DAG_ID='customer_transactions_pipeline' AIRFLOW_CTX_TASK_ID='Ingestion_Fivetran.wait_for_ingestion' AIRFLOW_CTX_EXECUTION_DATE='2024-05-03T02:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-03T02:00:00+00:00'
+[2024-05-13T04:54:41.756+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-13T04:54:41.779+0000] {base.py:84} INFO - Using connection ID 'fivetran_default' for task execution.
+[2024-05-13T04:54:43.255+0000] {hooks.py:487} INFO - Connector rescue_aerobics: sync_state = scheduled
+[2024-05-13T04:54:43.256+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-13T04:54:43.257+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2024-05-13T04:54:43.264+0000] {taskinstance.py:2486} INFO - Pausing task as DEFERRED. dag_id=customer_transactions_pipeline, task_id=Ingestion_Fivetran.wait_for_ingestion, execution_date=20240503T020000, start_date=20240513T045441
+[2024-05-13T04:54:43.310+0000] {local_task_job_runner.py:237} INFO - Task exited with return code 100 (task deferral)
+[2024-05-13T04:54:43.311+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-05-13T04:55:47.884+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-13T04:55:47.905+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_transactions_pipeline.Ingestion_Fivetran.wait_for_ingestion scheduled__2024-05-03T02:00:00+00:00 [queued]>
+[2024-05-13T04:55:47.915+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_transactions_pipeline.Ingestion_Fivetran.wait_for_ingestion scheduled__2024-05-03T02:00:00+00:00 [queued]>
+[2024-05-13T04:55:47.916+0000] {taskinstance.py:2301} INFO - Resuming after deferral
+[2024-05-13T04:55:47.939+0000] {taskinstance.py:2327} INFO - Executing <Task(FivetranSensor): Ingestion_Fivetran.wait_for_ingestion> on 2024-05-03 02:00:00+00:00
+[2024-05-13T04:55:47.943+0000] {standard_task_runner.py:63} INFO - Started process 12737 to run task
+[2024-05-13T04:55:47.946+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'customer_transactions_pipeline', 'Ingestion_Fivetran.wait_for_ingestion', 'scheduled__2024-05-03T02:00:00+00:00', '--job-id', '83', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpovmunehv']
+[2024-05-13T04:55:47.948+0000] {standard_task_runner.py:91} INFO - Job 83: Subtask Ingestion_Fivetran.wait_for_ingestion
+[2024-05-13T04:55:48.002+0000] {task_command.py:426} INFO - Running <TaskInstance: customer_transactions_pipeline.Ingestion_Fivetran.wait_for_ingestion scheduled__2024-05-03T02:00:00+00:00 [running]> on host f5da772b0226
+[2024-05-13T04:55:48.078+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-13T04:55:48.078+0000] {sensors.py:221} INFO - Fivetran connector rescue_aerobics finished syncing at 2024-05-13 04:55:19.408000+00:00
+[2024-05-13T04:55:48.079+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-13T04:55:48.087+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=customer_transactions_pipeline, task_id=Ingestion_Fivetran.wait_for_ingestion, execution_date=20240503T020000, start_date=20240513T045441, end_date=20240513T045548
+[2024-05-13T04:55:48.119+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-13T04:55:48.164+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-05-13T04:55:48.167+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-05-13T06:49:19.624+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-13T06:49:19.647+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_transactions_pipeline.Ingestion_Fivetran.wait_for_ingestion scheduled__2024-05-03T02:00:00+00:00 [queued]>
+[2024-05-13T06:49:19.657+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_transactions_pipeline.Ingestion_Fivetran.wait_for_ingestion scheduled__2024-05-03T02:00:00+00:00 [queued]>
+[2024-05-13T06:49:19.657+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2024-05-13T06:49:19.672+0000] {taskinstance.py:2327} INFO - Executing <Task(FivetranSensor): Ingestion_Fivetran.wait_for_ingestion> on 2024-05-03 02:00:00+00:00
+[2024-05-13T06:49:19.677+0000] {standard_task_runner.py:63} INFO - Started process 15268 to run task
+[2024-05-13T06:49:19.680+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'customer_transactions_pipeline', 'Ingestion_Fivetran.wait_for_ingestion', 'scheduled__2024-05-03T02:00:00+00:00', '--job-id', '104', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmplxo26kw3']
+[2024-05-13T06:49:19.682+0000] {standard_task_runner.py:91} INFO - Job 104: Subtask Ingestion_Fivetran.wait_for_ingestion
+[2024-05-13T06:49:19.732+0000] {task_command.py:426} INFO - Running <TaskInstance: customer_transactions_pipeline.Ingestion_Fivetran.wait_for_ingestion scheduled__2024-05-03T02:00:00+00:00 [running]> on host f5da772b0226
+[2024-05-13T06:49:19.844+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='mm22@gmail.com' AIRFLOW_CTX_DAG_OWNER='ct' AIRFLOW_CTX_DAG_ID='customer_transactions_pipeline' AIRFLOW_CTX_TASK_ID='Ingestion_Fivetran.wait_for_ingestion' AIRFLOW_CTX_EXECUTION_DATE='2024-05-03T02:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-03T02:00:00+00:00'
+[2024-05-13T06:49:19.846+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-13T06:49:19.894+0000] {base.py:84} INFO - Using connection ID 'fivetran_default' for task execution.
+[2024-05-13T06:49:21.326+0000] {hooks.py:487} INFO - Connector rescue_aerobics: sync_state = scheduled
+[2024-05-13T06:49:21.329+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-13T06:49:21.334+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2024-05-13T06:49:21.342+0000] {taskinstance.py:2486} INFO - Pausing task as DEFERRED. dag_id=customer_transactions_pipeline, task_id=Ingestion_Fivetran.wait_for_ingestion, execution_date=20240503T020000, start_date=20240513T064919
+[2024-05-13T06:49:21.380+0000] {local_task_job_runner.py:237} INFO - Task exited with return code 100 (task deferral)
+[2024-05-13T06:49:21.381+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-05-13T06:50:25.308+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-13T06:50:25.326+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_transactions_pipeline.Ingestion_Fivetran.wait_for_ingestion scheduled__2024-05-03T02:00:00+00:00 [queued]>
+[2024-05-13T06:50:25.335+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_transactions_pipeline.Ingestion_Fivetran.wait_for_ingestion scheduled__2024-05-03T02:00:00+00:00 [queued]>
+[2024-05-13T06:50:25.336+0000] {taskinstance.py:2301} INFO - Resuming after deferral
+[2024-05-13T06:50:25.349+0000] {taskinstance.py:2327} INFO - Executing <Task(FivetranSensor): Ingestion_Fivetran.wait_for_ingestion> on 2024-05-03 02:00:00+00:00
+[2024-05-13T06:50:25.353+0000] {standard_task_runner.py:63} INFO - Started process 15295 to run task
+[2024-05-13T06:50:25.356+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'customer_transactions_pipeline', 'Ingestion_Fivetran.wait_for_ingestion', 'scheduled__2024-05-03T02:00:00+00:00', '--job-id', '107', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpkxphwun8']
+[2024-05-13T06:50:25.358+0000] {standard_task_runner.py:91} INFO - Job 107: Subtask Ingestion_Fivetran.wait_for_ingestion
+[2024-05-13T06:50:25.406+0000] {task_command.py:426} INFO - Running <TaskInstance: customer_transactions_pipeline.Ingestion_Fivetran.wait_for_ingestion scheduled__2024-05-03T02:00:00+00:00 [running]> on host f5da772b0226
+[2024-05-13T06:50:25.474+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-13T06:50:25.475+0000] {sensors.py:221} INFO - Fivetran connector rescue_aerobics finished syncing at 2024-05-13 06:50:04.841000+00:00
+[2024-05-13T06:50:25.476+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-13T06:50:25.484+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=customer_transactions_pipeline, task_id=Ingestion_Fivetran.wait_for_ingestion, execution_date=20240503T020000, start_date=20240513T064919, end_date=20240513T065025
+[2024-05-13T06:50:25.529+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-13T06:50:25.586+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-05-13T06:50:25.589+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
